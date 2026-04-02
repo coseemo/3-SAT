@@ -154,15 +154,15 @@ plots:
 
 ```bash
 # Test a single solver
-python sat_solver.py --solver backtracking
-python sat_solver.py --solver heuristics
-python sat_solver.py --solver minisat
+python main.py --solver backtracking
+python main.py --solver heuristics
+python main.py --solver minisat
 
 # Run all three solvers and generate comparative plots
-python sat_solver.py --all
+python main.py --all
 
 # Use a custom configuration file
-python sat_solver.py --all --config config.yaml
+python main.py --all --config config.yaml
 ```
 
 Plots are saved to the directory specified in `config.yaml` (default: `output/`), in the formats listed (default: PNG and PDF).
