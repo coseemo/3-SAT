@@ -1,0 +1,33 @@
+#Configurazione esperimenti 3-SAT
+
+experiment:
+  #Numero di esperimenti per ogni rapporto M/N nel grafico probabilità
+  num_tests: 100
+  #Numero di punti per rapporto nel grafico distribuzione
+  points_per_ratio: 50
+
+variables:
+  #Lista di valori N (numero di variabili) da testare nel grafico probabilità
+  values: [10, 20, 30, 40]
+  #Valore N usato per il grafico distribuzione dettagliata
+  detailed: 40
+
+solvers:
+  #Attiva/disattiva singoli solver (ignorato se si usa --all o --solver da CLI)
+  backtracking: true
+  heuristics: true
+  minisat: false
+
+output:
+  #Directory dove salvare i grafici
+  dir: output
+  #Formati di salvataggio (png e/o pdf)
+  formats: [png, pdf]
+
+plots:
+  #Quali grafici generare
+  probability: true
+  times: true
+  distribution: true
+  #Palette colori per le curve
+  palette: ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00", "#ffff33"]
